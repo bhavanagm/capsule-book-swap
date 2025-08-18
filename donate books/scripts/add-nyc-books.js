@@ -3,7 +3,7 @@ const Book = require('../models/book');
 const User = require('../models/user');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/Database')
+mongoose.connect('mongodb://127.0.0.1:27017/Database')
   .then(() => console.log('✅ Connected to MongoDB database: Database'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
 
