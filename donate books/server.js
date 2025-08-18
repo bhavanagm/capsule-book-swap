@@ -10,7 +10,10 @@ const app = express();
 const PORT = 3000;
 
 // ✅ Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/Database')
+mongoose.connect("mongodb://127.0.0.1:27017/bookswap", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 .then(() => console.log('✅ Connected to MongoDB database: Database'))
 .catch(err => console.error('❌ MongoDB connection error:', err));
 
@@ -560,9 +563,9 @@ app.post('/api/create-test-user', async (req, res) => {
 });
 
 // ✅ Start server
-app.listen(PORT, () => {
-  console.log(`✅ Server running at: http://localhost:${PORT}`);
-  console.log(`🔗 Login: http://localhost:${PORT}/login`);
-  console.log(`🔗 Register: http://localhost:${PORT}/register`);
+app.listen(PORT, '0.0.0.0',() => {
+  console.log(`✅ Server running at: http://0.0.0.0:${PORT}`);
+  console.log(`🔗 Login: http://0.0.0.0:${PORT}/login`);
+  console.log(`🔗 Register: http://0.0.0.0:${PORT}/register`);
 });
 
