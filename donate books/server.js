@@ -565,7 +565,7 @@ app.post('/api/create-test-user', async (req, res) => {
 
 // ✅ Start server
 app.listen(PORT, 'localhost',() => {
-  console.log(`✅ Server running at: http://${HOST}:${PORT}`);
+  console.log(`✅ Server running at: http://54.91.155.101:${PORT}`);
   
 });
 
