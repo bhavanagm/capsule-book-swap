@@ -8,6 +8,7 @@ const Book = require('./models/book'); // ✅ Add your Book model
 
 const app = express();
 const PORT = 3000;
+const HOST = "0.0.0.0";
 
 // ✅ Connect to MongoDB
 mongoose.connect("mongodb://127.0.0.1:27017/bookswap", {
@@ -564,8 +565,7 @@ app.post('/api/create-test-user', async (req, res) => {
 
 // ✅ Start server
 app.listen(PORT, 'localhost',() => {
-  console.log(`✅ Server running at: http://localhost:${PORT}`);
-  console.log(`🔗 Login: http://localhost:${PORT}/login`);
-  console.log(`🔗 Register: http://localhost:${PORT}/register`);
+  console.log(`✅ Server running at: http://${HOST}:${PORT}`);
+  
 });
 
