@@ -563,9 +563,9 @@ app.post('/api/create-test-user', async (req, res) => {
 });
 
 // ✅ Start server
-app.listen(PORT, '0.0.0.0',() => {
-  console.log(`✅ Server running at: http://0.0.0.0:${PORT}`);
-  console.log(`🔗 Login: http://0.0.0.0:${PORT}/login`);
-  console.log(`🔗 Register: http://0.0.0.0:${PORT}/register`);
+app.listen(PORT, 'localhost',() => {
+  console.log(`✅ Server running at: http://localhost:${PORT}`);
+  console.log(`🔗 Login: http://localhost:${PORT}/login`);
+  console.log(`🔗 Register: http://localhost:${PORT}/register`);
 });
 
